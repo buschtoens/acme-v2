@@ -15,6 +15,8 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.5.0",
+    "got": "^8.0.3",
+    "http-link-header": "^0.8.0",
     "jws": "^3.1.4",
     "node-jose": "^0.11.0",
     "node-rsa": "^0.4.2",
@@ -27,7 +29,7 @@
     "dotenv": "^4.0.0",
     "env-proxy-agent": "^0.1.0",
     "eslint-config-prettier": "^2.9.0",
-    "got": "^8.0.3",
+    "mz": "^2.7.0",
     "nodemon": "^1.14.11"
   }
 }
