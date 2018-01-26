@@ -17,6 +17,46 @@ another [ACME client][other-clients].
 [certbot]: https://certbot.eff.org/
 [other-clients]: https://letsencrypt.org/docs/client-options/
 
+##### Development Status
+
+This project is under active development. The API is not yet finalized.
+
+Things that should be working:
+
+- [ ] General Protocol
+  - [x] Generating keys
+  - [x] Importing and exporting keys
+  - [ ] Generating a Certificate Signing Request (CSR)
+  - [x] HTTP/S proxy support
+  - [x] Retrieving and managing nonces
+  - [x] Sending unsigned requests
+  - [x] Sending signed requests
+    - [x] `jwk` variant
+    - [x] `kid` variant
+  - [ ] Handling protocol errors
+    - [x] Known errors are properly wrapped in custom error classes
+    - [ ] Retry logic
+- [x] Account management
+  - [x] Creation
+  - [x] Reading
+  - [x] Update
+  - [x] Deactivation
+  - [x] Key roll over
+- [ ] Orders
+  - [x] Creating
+  - [ ] Reading
+  - [x] Listing all orders associated with an account
+  - [ ] Listing the challenges of an order
+  - [ ] Finalizing
+- [ ] Authorization
+- [ ] Certificate revocation
+- [ ] Challenges
+  - [ ] `http-01`
+  - [ ] `tls-02`
+  - [ ] `dns-01`
+
+If you want to join efforts, open an issue and we can work together. :muscle:
+
 ## Installation
 
 ```
