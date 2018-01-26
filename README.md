@@ -1,9 +1,9 @@
 # acme-v2
 
-An ACME client compatible with the current [IETF ACME working draft 09]
-[acme-draft-09] (ACME v2) as used by the free, automated and open Certificate
-Authority [Let's Encrypt][letsencrypt] for their [v2 staging endpoint]
-[staging-endpoint].
+An ACME client compatible with the current
+[IETF ACME working draft 09][acme-draft-09] (ACME v2) as used by the free,
+automated and open Certificate Authority [Let's Encrypt][letsencrypt] for their
+[v2 staging endpoint][staging-endpoint].
 
 This is a low level protocol / API client. It does not offer any automation
 whatsoever. You could use this client to build higher level systems that handle
