@@ -10,27 +10,23 @@
     "start": "node --use_strict --harmony --experimental-modules -r dotenv/config server"
   },
   "dependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.16.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.5.0",
     "got": "^8.0.3",
     "http-link-header": "^0.8.0",
-    "jws": "^3.1.4",
     "node-forge": "^0.7.1",
-    "node-jose": "^0.11.0",
-    "node-rsa": "^0.4.2",
-    "pem": "^1.12.3",
-    "pem-jwk": "^1.5.1",
-    "prettier": "^1.10.2"
+    "node-jose": "^0.11.0"
   },
   "devDependencies": {
     "agent-base": "^4.2.0",
+    "babel-eslint": "^8.2.1",
     "dotenv": "^4.0.0",
     "env-proxy-agent": "^0.1.0",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.5.0",
     "mz": "^2.7.0",
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "prettier": "^1.10.2"
   }
 }
