@@ -69,5 +69,13 @@ const directoryUrl = directoryUrls['letsencrypt-staging'];
 
   console.log(order);
 
-  debugger;
+  const authorizations = await Promise.all(Array.from(order.authorizations));
+
+  for (const authorization of authorizations) {
+    console.log(authorization);
+
+    for (const challenge of authorization.challenges) {
+      console.log(challenge);
+    }
+  }
 })();
