@@ -59,15 +59,15 @@ const directoryUrl = directoryUrls['letsencrypt-staging'];
     console.log(`Saving key ${account.key.kid} as ${ACCOUNT_KEY_FILE}.`);
   }
 
-  // // create a new order
-  // const order = await account.createOrder({
-  //   identifiers: [
-  //     { type: 'dns', value: 'barmer.ddg-webservice.de' },
-  //     { type: 'dns', value: '*.barmer.ddg-webservice.de' }
-  //   ]
-  // });
+  // create a new order
+  const order = await account.createOrder({
+    identifiers: [
+      { type: 'dns', value: 'barmer.ddg-webservice.de' },
+      { type: 'dns', value: '*.barmer.ddg-webservice.de' }
+    ]
+  });
 
-  // console.log(order);
+  console.log(order);
 
   for await (const order of account.orders) {
     console.log(order);
