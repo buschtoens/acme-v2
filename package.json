@@ -28,9 +28,13 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-prettier": "^2.6.0",
     "mz": "^2.7.0",
     "nodemon": "^1.14.12",
     "prettier": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }
