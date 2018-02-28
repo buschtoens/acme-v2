@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "node": "current"
+      },
+      "shippedProposals": true,
+      "loose": true
+    }],
+    "@babel/preset-stage-1"
+  ]
+}
