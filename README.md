@@ -26,7 +26,7 @@ Things that should be working:
 - [ ] General Protocol
   - [x] Generating keys
   - [x] Importing and exporting keys
-  - [ ] Generating a Certificate Signing Request (CSR)
+  - [x] Generating a Certificate Signing Request (CSR)
   - [x] HTTP/S proxy support
   - [x] Retrieving and managing nonces
   - [x] Sending unsigned requests
