@@ -8,5 +8,9 @@
       "loose": true
     }],
     "@babel/preset-stage-1"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    ["@babel/plugin-proposal-class-properties", { "loose" : true }]
   ]
 }

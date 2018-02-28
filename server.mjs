@@ -69,7 +69,6 @@ const directoryUrl = directoryUrls['letsencrypt-staging'];
 
   // console.log(order);
 
-  console.log(account.orders);
   for await (const order of account.orders) {
     console.log(order);
   }
