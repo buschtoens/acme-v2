@@ -76,6 +76,7 @@ const directoryUrl = directoryUrls['letsencrypt-staging'];
 
     for (const challenge of authorization.challenges) {
       console.log(challenge);
+      console.log(await challenge.respond());
     }
   }
 })();
