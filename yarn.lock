@@ -6,6 +6,30 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
+"@types/got@^7.1.7":
+  version "7.1.7"
+  resolved "https://registry.yarnpkg.com/@types/got/-/got-7.1.7.tgz#fd8053a4e7f3e7d37f2aed6ea24f5f19ec4bda76"
+  dependencies:
+    "@types/node" "*"
+
+"@types/http-link-header@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@types/http-link-header/-/http-link-header-0.6.1.tgz#e7851d6ffe57566014c1bfdb7b30fc22742205c9"
+
+"@types/mz@^0.0.32":
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/@types/mz/-/mz-0.0.32.tgz#e8248b4e41424c052edc1725dd33650c313a3659"
+  dependencies:
+    "@types/node" "*"
+
+"@types/node-forge@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@types/node-forge/-/node-forge-0.7.2.tgz#bafb8123643a69186ca963dbe1a165ebdc78e3c7"
+
+"@types/node@*":
+  version "9.4.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.6.tgz#d8176d864ee48753d053783e4e463aec86b8d82e"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
