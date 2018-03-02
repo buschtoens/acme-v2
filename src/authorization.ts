@@ -1,6 +1,6 @@
 import { assertIsOrder } from './assertions';
 import ChallengesList from './challenges-list';
-import transformAsClass from './decorators/transform-as-class';
+import memoize from './decorators/memoize';
 
 /**
  * @typedef Identifier
@@ -35,7 +35,8 @@ import transformAsClass from './decorators/transform-as-class';
  *   challenges were used to validate possession of  the identifier.
  * @see https://tools.ietf.org/html/draft-ietf-acme-acme-09#section-7.1.4
  */
-export default class Authorization {
+
+class Authorization {
   /**
    * The order this instance is associated with.
    * @type {Order}
@@ -66,8 +67,14 @@ export default class Authorization {
    *   challenges that were successfully completed.
    * @type {Challenge[]}
    */
-  @transformAsClass(ChallengesList, 'inlineData')
-  challenges;
+  @memoize
+  get challenges() {
+    return new ChallengesList(this);
+  }
+  set challenges(inlineData) {
+    console.log(inlineData);
+    this.challenges.inlineData = inlineData;
+  }
 
   /**
    * The timestamp after which the server will consider this authorization
@@ -129,17 +136,15 @@ export default class Authorization {
   }
 
   /**
-   * If a client wishes to relinquish its authorization to issue
-   certificates
-   *   for an identifier, then it may request that the server
-   deactivates
-   *   each authorization associated with it by sending POST
-   requests with
-   *   the static object {"status": "deactivated"} to each
-   authorization URL.
+   * If a client wishes to relinquish its authorization to issue certificates
+   *   for an identifier, then it may request that the server deactivates
+   *   each authorization associated with it by sending POST requests with
+   *   the static object {"status": "deactivated"} to each authorization URL.
    * @return {Promise}
    */
   async deactivate() {
     return this.update({ status: 'deactivated' });
   }
 }
+
+export default Authorization;

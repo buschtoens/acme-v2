@@ -2,13 +2,12 @@
   "name": "acme-v2",
   "version": "0.0.0",
   "description": "ACME v2 client for retrieving and managing SSL / TLS certificates",
-  "main": "index.js",
   "repository": "https://github.com/buschtoens/acme-v2",
   "author": "Jan Buschtöns <jan@buschtoens.me> (https://jan.buschtoens.me/)",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node --harmony server.mjs",
-    "inspect": "NODE_DEBUG=acme babel-node --inspect --harmony server.mjs"
+    "start": "node --inspect --harmony dist/example.js",
+    "inspect": "NODE_DEBUG=acme node --inspect --harmony dist/example.js"
   },
   "dependencies": {
     "base64url": "^2.0.0",
@@ -18,26 +17,13 @@
     "node-jose": "^0.11.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/node": "^7.0.0-beta.40",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.40",
-    "@babel/plugin-syntax-async-generators": "^7.0.0-beta.40",
-    "@babel/plugin-syntax-object-rest-spread": "^7.0.0-beta.40",
-    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.40",
     "agent-base": "^4.2.0",
-    "babel-eslint": "^8.2.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "dotenv": "^5.0.0",
     "env-proxy-agent": "^0.1.0",
-    "eslint": "^4.17.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-prettier": "^2.6.0",
     "mz": "^2.7.0",
     "nodemon": "^1.14.12",
-    "prettier": "^1.11.0"
+    "prettier": "^1.11.0",
+    "typescript": "^2.7.2"
   },
   "engines": {
     "node": ">=10"

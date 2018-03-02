@@ -2,7 +2,7 @@ import { assertIsACMEV2Client, assertIsKey } from './assertions';
 import sign from './sign';
 import OrdersList from './orders-list';
 import Order from './order';
-import transformAsClass from './decorators/transform-as-class';
+import memoize from './decorators/memoize';
 
 /**
  * @see https://tools.ietf.org/html/draft-ietf-acme-acme-09#section-7.1.2
@@ -63,7 +63,13 @@ export default class Account {
    *   this account.
    * @type {OrdersList}
    */
-  @transformAsClass(OrdersList) orders;
+  @memoize
+  get orders() {
+    return new OrdersList(this);
+  }
+  set(url: string) {
+    this.orders.url = url;
+  }
 
   /**
    * @param {ACMEV2Client} acme

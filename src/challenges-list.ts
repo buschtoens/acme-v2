@@ -1,9 +1,5 @@
 import Challenge from './challenge';
 
-// HACK: This works around a weird Babel error.
-// https://github.com/babel/babel/pull/7452
-const { iterator } = Symbol;
-
 /**
  * @external {Iterator} https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator
  */
@@ -36,7 +32,7 @@ export default class ChallengesList {
    * Loads all challenges of this ChallengesList.
    * @yields {Challenge}
    */
-  *[iterator]() {
+  *[Symbol.iterator]() {
     for (const challengeData of this.inlineData) {
       yield new Challenge(this.authorization, challengeData);
     }

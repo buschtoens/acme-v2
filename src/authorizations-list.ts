@@ -1,11 +1,6 @@
 import { assertIsOrder } from './assertions';
 import Authorization from './authorization';
 
-// HACK: This works around a weird Babel error.
-// https://github.com/babel/babel/pull/7452
-const { iterator } = Symbol;
-const ErrorClass = Error;
-
 /**
  * @external {Iterator} https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator
  */
@@ -41,7 +36,7 @@ export default class AuthorizationsList {
    * Loads all authorizations of this AuthorizationsList.
    * @yields {Authorization}
    */
-  *[iterator]() {
+  *[Symbol.iterator]() {
     for (const authorizationURL of this.urls) {
       yield Authorization.createFromURL(this.order, authorizationURL);
     }

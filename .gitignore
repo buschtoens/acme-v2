@@ -60,5 +60,8 @@ typings/
 # esdoc
 docs/
 
+# TypeScript output 
+dist/
+
 # demo
 account-key.json

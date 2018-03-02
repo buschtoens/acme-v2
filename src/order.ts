@@ -1,6 +1,6 @@
 import { assertIsAccount } from './assertions';
 import AuthorizationsList from './authorizations-list';
-import transformAsClass from './decorators/transform-as-class';
+import memoize from './decorators/memoize';
 
 /**
  * @see https://tools.ietf.org/html/draft-ietf-acme-acme-09#section-7.1.3
@@ -23,8 +23,13 @@ export default class Order {
    *   this order.
    * @type {AuthorizationsList}
    */
-  @transformAsClass(AuthorizationsList, 'urls')
-  authorizations;
+  @memoize
+  get authorizations() {
+    return new AuthorizationsList(this);
+  }
+  set authorizations(urls) {
+    this.authorizations.urls = urls;
+  }
 
   /**
    * @param {Account} account

@@ -3,9 +3,9 @@ import envProxyAgent from 'env-proxy-agent';
 import fs from 'mz/fs';
 import jose from 'node-jose';
 import ACMEV2Client from './';
-import directoryUrls from './directory-urls';
-import AccountDoesNotExistError from './lib/errors/account-does-not-exist';
-import generateKey from './lib/generate-key';
+import directoryUrls from '../directory-urls.json';
+import AccountDoesNotExistError from './errors/account-does-not-exist';
+import generateKey from './generate-key';
 
 const { JWK } = jose;
 
@@ -16,6 +16,7 @@ const directoryUrl = directoryUrls['letsencrypt-staging'];
 (async () => {
   ACMEV2Client.agent = envProxyAgent(directoryUrl);
 
+  debugger;
   const acme = new ACMEV2Client({
     directory: await ACMEV2Client.loadDirectory(directoryUrl)
   });
